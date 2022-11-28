@@ -13,6 +13,11 @@ config_version=4
 config/name="Slimey's Adventure 2D(MVM)"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalFuntions="*res://scripts/globalFuntions.gd"
+GlobalVariables="*res://scripts/globalVariables.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

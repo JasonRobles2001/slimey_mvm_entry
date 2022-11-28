@@ -11,8 +11,6 @@ extents = Vector2( 12, 7.5 )
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 scale = Vector2( 3, 3 )
 script = ExtResource( 1 )
-jump_speed = -1000
-gravity = 1700
 
 [node name="Slimey" type="Sprite" parent="KinematicBody2D"]
 scale = Vector2( 3, 3 )

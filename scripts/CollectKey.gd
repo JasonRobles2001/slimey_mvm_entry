@@ -2,6 +2,6 @@ extends Area2D
 
 
 
-func onPlayerEntered(body):
+func onPlayerEntered(_body):
 	queue_free()
 	print("Door Unlocked");
