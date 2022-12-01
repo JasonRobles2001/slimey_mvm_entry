@@ -45,6 +45,10 @@ jump={
  ]
 }
 
+[mono]
+
+project/assembly_name="Slimey's Adventure 2D(MVM)"
+
 [physics]
 
 common/enable_pause_aware_picking=true

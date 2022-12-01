@@ -42,7 +42,7 @@ func _physics_process(delta):
 		jumpCount -= 1 # One less jump!
 		jumping = true
 		#jump higher if High Jump is collected
-		if GlobalVariables.canHighJump == true:
+		if GlobalVariables.canHighJump and GlobalVariables.hasPowerup:
 			GlobalVariables.jump_speed = -900
 		else:
 			GlobalVariables.jump_speed = -700
