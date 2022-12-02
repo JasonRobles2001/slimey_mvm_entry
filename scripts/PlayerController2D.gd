@@ -6,7 +6,6 @@ export (int) var gravity = 1200
 
 var velocity := Vector2.ZERO
 var jumping = false;
-var jumpCount = 1;
 
 onready var slimey = $Slimey;
 
@@ -31,15 +30,15 @@ func _physics_process(delta):
 	# If touching the ground, refresh the jump counter.
 	if is_on_floor():
 		if GlobalVariables.canDoubleJump && GlobalVariables.hasPowerup:
-			jumpCount = 2
+			GlobalVariables.jumpCount = 2
 		else:
-			jumpCount = 1
+			GlobalVariables.jumpCount = 1
 		jumping = false
 		
 
 	# Should we jump?
-	if Input.is_action_just_pressed("jump") and jumpCount > 0:
-		jumpCount -= 1 # One less jump!
+	if Input.is_action_just_pressed("jump") and GlobalVariables.jumpCount > 0:
+		GlobalVariables.jumpCount -= 1 # One less jump!
 		jumping = true
 		#jump higher if High Jump is collected
 		if GlobalVariables.canHighJump and GlobalVariables.hasPowerup:
